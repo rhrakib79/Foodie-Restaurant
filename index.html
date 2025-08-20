@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foodie Restaurant</title>
+  <!-- External CSS link -->
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header: logo + nav -->
+  <header class="header">
+    <div class="container header__inner">
+      <h1 class="logo">🍴 Foodie <span class="text-accent">Restaurant</span></h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#menu">Menu</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero/Banner photo section -->
+  <section id="home" class="banner">
+    <div class="banner__overlay">
+      <h2 class="banner__title">Delicious Food Awaits You</h2>
+      <p class="banner__subtitle">Fresh • Colorful • Tasty</p>
+      <a href="#menu" class="btn btn--primary">View Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu cards with photos -->
+  <section id="menu" class="section">
+    <div class="container">
+      <h2 class="section__title">Our Menu</h2>
+      <p class="section__subtitle">Pick your favorite from our colorful dishes</p>
+
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <img class="card__img" src="Cheesy Pizza.jpeg" alt="Cheesy pizza" />
+          <div class="card__body">
+            <h3 class="card__title">Cheesy Pizza</h3>
+            <p class="card__text">Freshly baked pizza loaded with cheese & toppings.</p>
+            <div class="card__footer">
+              <span class="price">500 Taka</span>
+              <button class="btn btn--ghost">Order</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <img class="card__img" src="Juicy Burger.webp" alt="Juicy Burger" />
+          <div class="card__body">
+            <h3 class="card__title">Juicy Burger</h3>
+            <p class="card__text">Grilled to perfection with fresh veggies & sauce.</p>
+            <div class="card__footer">
+              <span class="price">220 Taka</span>
+              <button class="btn btn--ghost">Order</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <img class="card__img" src="italian pasta.jpeg" alt="Italian Pasta" />
+          <div class="card__body">
+            <h3 class="card__title">Italian Pasta</h3>
+            <p class="card__text">Rich creamy pasta served with garlic bread.</p>
+            <div class="card__footer">
+              <span class="price">270 Taka</span>
+              <button class="btn btn--ghost">Order</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <img class="card__img" src="Sweet Dessert.jpeg" alt="Sweet Dessert" />
+          <div class="card__body">
+            <h3 class="card__title">Sweet Dessert</h3>
+            <p class="card__text">A delightful treat to end your meal.</p>
+            <div class="card__footer">
+              <span class="price">180 Taka</span>
+              <button class="btn btn--ghost">Order</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">About Us</h2>
+      <p class="lead">
+        We’re a colorful kitchen serving fresh, flavorful dishes made with love. Dine-in,
+        take away, or order online—your taste buds will thank you!
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact/Footer -->
+  <footer id="contact" class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 Foodie Restaurant — All Rights Reserved</p>
+      <p><a class="footer__link" href="mailto:hello@foodie.example">hello@foodie.example</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* ========== Base / Utility ========== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --bg: #fff8f0;           
+  --text: #222;            
+  --muted: #666;          
+  --primary: #ff6347;      
+  --accent: #ffb703;       
+  --card: #ffffff;         
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+  --radius: 20px;
+}
+
+html, body { height: 100%; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container{
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+/* Small helpers */
+.text-accent{ color: var(--accent); }
+.lead{ font-size: 1.075rem; color: var(--muted); max-width: 60ch; }
+
+/* ========== Header ========== */
+.header{
+  background: var(--primary);
+  color: #fff;
+  position: sticky; top: 0; z-index: 10;
+  box-shadow: var(--shadow);
+}
+.header__inner{
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 0;
+}
+.logo{ font-size: 1.4rem; font-weight: 800; letter-spacing: .3px; }
+.nav__list{ list-style: none; display: flex; gap: 22px; }
+.nav__link{
+  color: #fff; text-decoration: none; font-weight: 600;
+  padding: 8px 10px; border-radius: 999px; transition: .25s ease;
+}
+.nav__link:hover{ background: rgba(255,255,255,.18); }
+
+/* ========== Banner (Photo hero) ========== */
+.banner{
+  min-height: 62vh;
+  background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") center/cover no-repeat;
+  display: grid; place-items: center;
+  position: relative;
+}
+.banner__overlay{
+  text-align: center; color: #fff;
+  padding: 28px 22px; border-radius: var(--radius);
+  background: linear-gradient( to bottom right, rgba(0,0,0,.55), rgba(0,0,0,.35) );
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(1px);
+}
+.banner__title{ font-size: clamp(1.8rem, 3.2vw + 1rem, 3rem); font-weight: 800; letter-spacing: .5px; }
+.banner__subtitle{ margin: 8px 0 16px; font-weight: 600; opacity: .95; }
+
+/* Buttons */
+.btn{
+  display: inline-block; border: 0; cursor: pointer;
+  padding: 12px 18px; border-radius: 999px; font-weight: 700; text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.btn--primary{ background: var(--accent); color: #111; box-shadow: var(--shadow); }
+.btn--primary:hover{ transform: translateY(-1px); }
+.btn--ghost{ background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+.btn--ghost:hover{ opacity: .85; }
+
+/* ========== Sections ========== */
+.section{ padding: 64px 0; }
+.section--alt{ background: #fff; }
+.section__title{
+  font-size: clamp(1.4rem, 2.5vw + .8rem, 2.2rem);
+  text-align: center; color: var(--primary); margin-bottom: 6px; font-weight: 800;
+}
+.section__subtitle{ text-align: center; color: var(--muted); margin-bottom: 28px; }
+
+/* ========== Menu Grid Cards ========== */
+.grid{
+  display: grid; gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card{
+  background: var(--card); border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover{ transform: translateY(-6px); box-shadow: 0 18px 38px rgba(0,0,0,.12); }
+.card__img{
+  width: 100%; height: 190px; object-fit: cover; display: block;
+}
+.card__body{ padding: 16px; }
+.card__title{ font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; }
+.card__text{ color: var(--muted); margin-bottom: 12px; }
+.card__footer{
+  display: flex; align-items: center; justify-content: space-between;
+}
+.price{ font-weight: 800; color: #1a1a1a; }
+
+/* ========== Footer ========== */
+.footer{
+  background: #222; color: #ddd; padding: 28px 0; margin-top: 24px;
+}
+.footer__inner{
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.footer__link{ color: #fff; text-decoration: none; }
+.footer__link:hover{ text-decoration: underline; }
+
+/* ========== Responsive tweaks ========== */
+@media (max-width: 720px){
+  .header__inner{ flex-wrap: wrap; gap: 10px; }
+  .nav__list{ gap: 12px; flex-wrap: wrap; }
+  .banner{ min-height: 56vh; }
+  .card__img{ height: 170px; }
+  .footer__inner{ flex-direction: column; text-align: center; }
+}
